@@ -33,8 +33,8 @@ export default {
   data() {
     return {
       user: {
-        mobile: '',
-        code: '',
+        mobile: '13922222222',
+        code: '246810',
         agree: false
       },
       loginloading:false, //登录的loading状态
@@ -83,6 +83,10 @@ export default {
         // 验证通过，提交登录
         login(this.user).then(res=>{  // 登录成功
           console.log(res)
+
+          //在登录成功以后将用户信息存储到本地存储
+          window.localStorage.setItem('user',JSON.stringify(res.data.data))
+
           this.loginloading=false
           //成功的提示
           this.$message({
