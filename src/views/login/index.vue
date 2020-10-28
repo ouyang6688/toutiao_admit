@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       user: {
-        mobile: '13922222222',
+        mobile: '13911111111',
         code: '246810',
         agree: false
       },
@@ -82,7 +82,7 @@ export default {
         }
         // 验证通过，提交登录
         login(this.user).then(res=>{  // 登录成功
-          console.log(res)
+          // console.log(res)
 
           //在登录成功以后将用户信息存储到本地存储
           window.localStorage.setItem('user',JSON.stringify(res.data.data))

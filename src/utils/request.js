@@ -1,7 +1,16 @@
 import axios from 'axios'
+import JSONbig from 'json-bigint'
 
 const request = axios.create({
-  baseURL: 'http://ttapi.research.itcast.cn/' // 请求的基础路径
+    baseURL: 'http://ttapi.research.itcast.cn/', // 请求的基础路径
+    transformResponse: [function (data) {
+        try {
+            return JSONbig.parse(data)
+        }catch (e) {
+            console.log('转换失败', e)
+            return data
+        }
+    }]
 })
 
 // 请求拦截器

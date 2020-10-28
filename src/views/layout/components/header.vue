@@ -54,7 +54,7 @@ export default {
     getUser(){
       getUserProfile().then(res=>{
         this.user=res.data.data
-        console.log(this.user)
+        // console.log(this.user)
       })
     },
     onlogout(){
