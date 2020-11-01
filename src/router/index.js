@@ -6,6 +6,7 @@ import Home from '@/views/home/index'
 import Layout from '@/views/layout/index'
 import Article from '@/views/article/index'
 import Publish from '@/views/publish/index'
+import Image from '@/views/image/index'
 
 Vue.use(VueRouter)
 
@@ -34,9 +35,15 @@ const routes = [
         path: '/publish',
         name:'publish',
         component: Publish
+      },
+      {
+        path: '/image',
+        name:'image',
+        component: Image
       }
     ]
   }
+
 ]
 
 const router = new VueRouter({
