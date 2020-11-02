@@ -7,6 +7,8 @@ import Layout from '@/views/layout/index'
 import Article from '@/views/article/index'
 import Publish from '@/views/publish/index'
 import Image from '@/views/image/index'
+import Comment from '@/views/comment/index'
+import Melog from '@/views/log/index'
 
 Vue.use(VueRouter)
 
@@ -40,6 +42,16 @@ const routes = [
         path: '/image',
         name:'image',
         component: Image
+      },
+      {
+        path: '/comment',
+        name:'comment',
+        component: Comment
+      },
+      {
+        path: '/melog',
+        name:'melog',
+        component: Melog
       }
     ]
   }

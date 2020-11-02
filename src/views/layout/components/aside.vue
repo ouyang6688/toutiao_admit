@@ -35,7 +35,7 @@
       <i class="el-icon-user"></i>
       <span slot="title">个人设置</span>
     </el-menu-item>
-    <el-menu-item index="8">
+    <el-menu-item index="/melog">
       <i class="el-icon-loading"></i>
       <span slot="title">开发日志</span>
     </el-menu-item>
